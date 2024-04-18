@@ -8,6 +8,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Service from "./components/Service";
 import Home from "./components/Home";
+import Books from "./components/Books";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/about" element={<About />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/service" element={<Service />} />
+          <Route exact path="/books" element={<Books />} />
         </Routes>
         <Footer />
       </div>
