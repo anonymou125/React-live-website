@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "name": "kali-image",
+        "description": " this is the logo of kali linux",
+        "url": "../public/walpapers.jpg"
+    },
+    {
+        "id": "2",
+        "name": "ARC-Linux",
+        "description": " this is the logo of ARC linux",
+        "url": "../public/Black.jpg"
+    },
+    {
+        "id": "3",
+        "name": "Gorudo-Linux",
+        "description": " this is one of the best os for hacking too",
+        "url": "../public/blackPink.jpg"
+    }
+]

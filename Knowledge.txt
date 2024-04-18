@@ -1,0 +1,104 @@
+In React Router version 6, 
+//yg the Switch component has been replaced with Routes and Route components. Here's how you can refactor your code to use the new syntax:
+jsx
+Copy code
+
+//yc import React from "react";
+//yc import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//yc import About from "./components/About";
+//yc import Contact from "./components/Contact";
+//yc 
+//yc function App() {
+//yc   return (
+//yc     <Router>
+//yc       <div className="container-fluid bg-gray-200 flex flex-col justify-center items-center w-full h-screen">
+//yc         <Routes>
+//yc           <Route path="/" element={<About />} />
+//yc           <Route path="/contact" element={<Contact />} />
+//yc         </Routes>
+//yc       </div>
+//yc     </Router>
+//yc   );
+//yc }
+
+export default App;
+In this code:
+
+Routes replaces Switch.
+Each Route component now uses the path prop for specifying the URL path and the element prop for specifying the component to render.
+Make sure to update your code according to these changes, and it should resolve the issue you're facing with Switch.
+
+
+? your have to replaced switch with routes if you are using upper of 6version of react dom 
+
+//---------------------------------------------------------------------------------------------------------
+
+IN REACT : 
+//imc dont use:
+    <a href="/home" className="menu-link">
+//yg  {[ <a> </a> ]}is not used because it reload the page 
+
+//imc use:
+
+    for that use: 👉 import { Link } from "react-router-dom";
+//yg  <Link to="/home" className="menu-link"> HOME </Link>
+
+//yc to do any style so that you can see which menu is now active:
+    : you have to use 
+
+
+
+
+
+
+//imc important 👇🏻👇🏻👇🏻
+ const lists = [
+    { id: "1", name: "earPOD", price: "24₹", brand: "indian" },
+    { id: "2", name: "headphone", price: "100₹", brand: "china" },
+    { id: "3", name: "headset", price: "240₹", brand: "korea" },
+  ];
+  const [Lname, setLname] = useState(" ");
+  //   console.log(Lname);
+  lists.map((items) => {
+    // console.log(items.brand);
+    setLname(items.name);
+  });
+//yc 👆🏻👆🏻👆🏻 map() doesnot work like this you have to do such bellow 
+
+//---------------------------------------------------------------------------------------------------------
+
+The difference between `lists.map((items) => items.name)` and `lists.map((items) => { items.name })` lies in how they handle the return value within the arrow function passed to `map()`.
+
+1. **`lists.map((items) => items.name)`:**
+   - In this syntax, the arrow function implicitly returns the result of `items.name`.
+   - It directly returns the value of `items.name` for each element in the `lists` array.
+   - This syntax is concise and suitable when you want to directly return a single expression without any additional logic or manipulation.
+
+2. **`lists.map((items) => { items.name })`:**
+   - In this syntax, the arrow function uses curly braces `{}` to enclose multiple statements.
+   - If you use curly braces `{}`, you need to explicitly return a value using the `return` keyword.
+   - However, in this case, you haven't included a `return` statement, so the function does not explicitly return anything.
+   - In JavaScript, if you don't include a `return` statement within a function block (`{}`), the function implicitly returns `undefined`.
+   - Therefore, this syntax will effectively return an array of `undefined` values instead of the values of `items.name`.
+   - This syntax is incorrect for mapping over an array and extracting a specific property, as it doesn't return the expected result.
+
+In summary, the first syntax is correct and suitable for extracting a specific property (`name`) from each element in the `lists` array and returning it directly. The second syntax is incorrect and will not provide the expected result because it doesn't properly return the value of `items.name`.
+
+
+
+
+//yc--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//yg if we set here two data like this useEffect(() => {
+  if (ImageAbout.length > 0) {
+      setKimage(ImageAbout[ImageAbout.length - 2]);
+      setNewImage(ImageAbout[ImageAbout.length - 1]);
+    }
+  }, [Kimage]); we need useState({}) and if we write =   useEffect(() => {
+    if (ImageAbout.length > 0) {
+      setKimage(ImageAbout[ImageAbout.length - 2]);
+    }
+  }, [Kimage]);
+//yg     then no need-- heres why 
+//yc  if you're setting multiple state variables within the same useEffect 
+//yc  based on changes to one of them, it's a good idea to initialize all of them with {} for safety and consistency.

@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Pulp Fiction",
+        "description": "A thrilling crime film about a pair of low-rent hit men, a boxer, a gangster's wife, and a pair of diner bandits intertwining in four tales of violence and redemption.",
+        "image": "https://example.com/pulp-fiction.jpg",
+        "link": "https://example.com/pulp-fiction-link"
+    },
+    {
+        "id": 2,
+        "name": "The Shawshank Redemption",
+        "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+        "image": "https://example.com/shawshank-redemption.jpg",
+        "link": "https://example.com/shawshank-redemption-link"
+    },
+    {
+        "id": 3,
+        "name": "The Godfather",
+        "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+        "image": "https://example.com/godfather.jpg",
+        "link": "https://example.com/godfather-link"
+    },
+    {
+        "id": 4,
+        "name": "Inception",
+        "description": "A thief who steals information from the subconscious. When he is offered a chance to have his criminal history erased in exchange for implanting an idea into a CEO's mind, he assembles a team to break into the man's mind.",
+        "image": "https://example.com/inception.jpg",
+        "link": "https://example.com/inception-link"
+    },
+    {
+        "id": 5,
+        "name": "Fight Club",
+        "description": "An insomniac office worker, looking for a way to change his life, crosses paths with a devil-may-care soapmaker, forming an underground fight club that evolves into something much, much more.",
+        "image": "https://example.com/fight-club.jpg",
+        "link": "https://example.com/fight-club-link"
+    }
+]

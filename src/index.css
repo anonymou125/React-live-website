@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  transition: all 0.5s;
+  color: rgb(172, 164, 164);
+  border-bottom: 2px solid rgb(70, 69, 69);
+}
+#header {
+  width: 100%;
+  height: 80vh;
+  margin-top: 70px;
+}
+.btn {
+  text-decoration: none;
+}
+#header h1 {
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  font-size: 45px;
+}
+.brand_name {
+  text-transform: uppercase;
+  color: rgb(19, 156, 156);
+}
+.menu li .anchor_link:focus {
+  background: rgb(208, 205, 205);
+  color: #000;
+}
+.menu li .anchor_link:active {
+  background: rgb(208, 205, 205);
+  color: #000;
+}
+.input {
+  background: #fff;
+}
+.animated {
+  animation: anime 2s ease-in-out infinite alternate-reverse both;
+}
+@keyframes anime {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.menu-page {
+  background-color: #2b2a2a;
+  padding: 20px;
+  color: #fff;
+}
+
+.menu-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  margin: 0 10px;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-link:hover {
+  background-color: #4caf50;
+  color: #fff;
+}
